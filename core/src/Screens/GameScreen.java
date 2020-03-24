@@ -8,7 +8,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
@@ -35,7 +34,7 @@ public class GameScreen implements Screen {
     public GameScreen(Game game){
         drawQueue = new DrawQueue();
         updateQueue = new UpdateQueue();
-
+       // box2dBodyCreator = new Box2dBodyCreator(this);
         this.game = game;
         gamecam = new OrthographicCamera();
         gamePort = new FitViewport(RecourceManager.W_WIDTH,RecourceManager.W_HEIGHT,gamecam);
@@ -52,6 +51,10 @@ public class GameScreen implements Screen {
 
 
 
+    }
+
+    public World getWorld(){
+        return world;
     }
 
     @Override
@@ -71,9 +74,12 @@ public class GameScreen implements Screen {
         gamecam.zoom = 1f;
         renderer.setView(gamecam);
         renderer.render();
+        b2dr.render(world, gamecam.combined);
     }
 
-
+    public TiledMap getMap(){
+        return map;
+    }
     @Override
     public void resize(int width, int height) {
         gamePort.update(width,height);

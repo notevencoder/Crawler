@@ -39,7 +39,9 @@ public class BaseGameClass extends Game {
 		//System.out.println(manager.getCurrentScreen());
 
 	}
-	
+
+
+
 	@Override
 	public void dispose () {
 		batch.dispose();
