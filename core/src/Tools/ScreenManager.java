@@ -22,7 +22,7 @@ public class ScreenManager {
     }
 
     private void defineScreens(){
-        gameScreen = new GameScreen();
+        gameScreen = new GameScreen(game);
         menuScreen = new MenuScreen();
 
         screens = new HashMap<>();

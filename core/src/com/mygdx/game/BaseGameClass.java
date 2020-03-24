@@ -26,17 +26,17 @@ public class BaseGameClass extends Game {
 	@Override
 	public void create () {
 		batch = RecourceManager.batch;
-		/*manager = new ScreenManager(this);
-		manager.setScreen("Menu");*/
+		manager = new ScreenManager(this);
+		manager.setScreen("Game");
 
-		ConfigCreator cc = new ConfigCreator(Paths.get("C:\\Users\\AsisT\\Desktop\\crawler\\core\\assets\\frames"),Paths.get("C:\\Users\\AsisT\\Desktop\\crawler\\core\\assets\\Animations"));
+		//ConfigCreator cc = new ConfigCreator(Paths.get("C:\\Users\\AsisT\\Desktop\\crawler\\core\\assets\\frames"),Paths.get("C:\\Users\\AsisT\\Desktop\\crawler\\core\\assets\\Animations"));
 	}
 
 
 	@Override
 	public void render () {
-		/*super.render();
-		System.out.println(manager.getCurrentScreen());*/
+		super.render();
+		//System.out.println(manager.getCurrentScreen());
 
 	}
 	

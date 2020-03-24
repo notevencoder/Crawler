@@ -19,7 +19,7 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 import javax.swing.text.View;
 
 public class MenuScreen implements Screen {
-    private Sprite background;
+
     private OrthographicCamera gamecam;
     private Viewport viewport;
     private World world;
@@ -30,7 +30,7 @@ public class MenuScreen implements Screen {
     public MenuScreen(){
         this.game = game;
         batch = RecourceManager.batch;
-        background = new Sprite(new Texture("background.jpg"));
+
         gamecam = new OrthographicCamera();
         viewport = new FitViewport(1280,800, gamecam);
         gamecam.position.set(viewport.getScreenWidth() / 2, viewport.getScreenHeight() / 2,0);
@@ -46,9 +46,7 @@ public class MenuScreen implements Screen {
 
         System.out.println("Who is reading it - gonna die ");
         batch.setProjectionMatrix(gamecam.combined);
-        batch.begin();
-        background.draw(batch);
-        batch.end();
+
     }
 
     @Override
