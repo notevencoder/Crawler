@@ -12,7 +12,7 @@ public class BaseGameClass extends ApplicationAdapter {
 	@Override
 	public void create () {
 		ResourceManager rm = new ResourceManager();
-		rm.load(1);
+		rm.load();
 	}
 
 	@Override

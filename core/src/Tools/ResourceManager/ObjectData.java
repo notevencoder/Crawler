@@ -1,10 +1,9 @@
 package Tools.ResourceManager;
 
 import java.util.ArrayList;
-
+/**
+ * Класс для чтения данных из json файлов
+ */
 class ObjectData {
-    public String name;
-    public int width;
-    public int height;
     public ArrayList<AnimationData> animations;
 }
