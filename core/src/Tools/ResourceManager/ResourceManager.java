@@ -12,6 +12,7 @@ import java.util.HashMap;
  * Класс для загрузки и хранения всех анимаций
  */
 public class ResourceManager {
+
     private HashMap<String, HashMap<String, Animation>> objAnims;
     public ResourceManager() {
         objAnims = new HashMap<>();
@@ -36,7 +37,7 @@ public class ResourceManager {
             *  Название файлов и папки должно совпадать с названием объекта
             */
             file = Gdx.files.internal(RMConfig.OBJECTS_PATH + objName + "/" + objName + ".json");
-            atlas = new TextureAtlas(RMConfig.OBJECTS_PATH + objName + "/" + objName + ".atlas");
+            atlas = new TextureAtlas(RMConfig.OBJECTS_PATH + objName + "/" + objName + ".pack");
             ObjectData obj = json.fromJson(ObjectData.class, file.readString());
             for (AnimationData anim : obj.animations) {
                 currRegion = atlas.findRegion(anim.txRegionName);

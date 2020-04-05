@@ -32,7 +32,7 @@ public class BaseGameClass extends Game {
 	public void create () {
 
 		ResourceManager rm = new ResourceManager();
-		rm.load();
+		//rm.load();
 
 		batch = RecourceManager.batch;
 		manager = new ScreenManager(this);
