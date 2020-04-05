@@ -1,0 +1,19 @@
+{
+  "name": "TestObj1",
+  "width": 8,
+  "height": 16,
+  "animations": [
+    {
+      "animName": "Anim1",
+      "txRegionName": "SomeName",
+      "frameCount": 2,
+      "frameDur": 0.2
+    },
+    {
+      "animName": "Anim2",
+      "txRegionName": "SomeName2",
+      "frameCount": 3,
+      "frameDur": 0.1
+    }
+  ]
+}

@@ -1,9 +1,14 @@
 package com.mygdx.game;
 
+import Tools.ResourceManager.ResourceManager;
+import com.badlogic.gdx.ApplicationAdapter;
+import com.badlogic.gdx.graphics.Texture;
+
 import Tools.ConfigsStuff.ConfigCreator;
 import Tools.RecourceManager;
 import Tools.ScreenManager;
 import com.badlogic.gdx.Game;
+
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.sun.imageio.plugins.jpeg.JPEGImageReader;
 import com.sun.imageio.plugins.jpeg.JPEGImageReaderSpi;
@@ -25,11 +30,16 @@ public class BaseGameClass extends Game {
 
 	@Override
 	public void create () {
+
+		ResourceManager rm = new ResourceManager();
+		rm.load();
+
 		batch = RecourceManager.batch;
 		manager = new ScreenManager(this);
 		manager.setScreen("Game");
 
 		//ConfigCreator cc = new ConfigCreator(Paths.get("C:\\Users\\AsisT\\Desktop\\crawler\\core\\assets\\frames"),Paths.get("C:\\Users\\AsisT\\Desktop\\crawler\\core\\assets\\Animations"));
+
 	}
 
 
