@@ -1,25 +1,16 @@
 {
-  "name": "player",
-  "width": 16,
-  "height": 32,
   "animations": [
     {
-      "animName": "idle",
-      "txRegionName": "idle",
-      "frameCount": 4,
-      "frameDur": 0.1
+      "name": "idle",
+      "frameCount": 4
     },
     {
-      "animName": "run",
-      "txRegionName": "run",
-      "frameCount": 4,
-      "frameDur": 0.1
+      "name": "run",
+      "frameCount": 4
     },
     {
-      "animName": "hit",
-      "txRegionName": "hit",
-      "frameCount": 1,
-      "frameDur": 0.1
+      "name": "hit",
+      "frameCount": 1
     }
   ]
 }
