@@ -48,7 +48,7 @@ public class ResourceManager {
                 animations.put(anim.name, new Animation(RMConfig.FRAME_DUR, frames));
                 frames.clear();
             }
-            objAnims.put(objName,animations);
+            objAnims.put(objName,new HashMap<String, Animation>(animations));
             animations.clear();
         }
     }
