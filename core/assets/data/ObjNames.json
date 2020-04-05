@@ -1,6 +1,5 @@
 {
-  "list" : [
-    "TestObj1",
-    "TestObj2"
+  "animList" : [
+    "player"
   ]
 }

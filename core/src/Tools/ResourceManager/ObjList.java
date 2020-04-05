@@ -6,5 +6,5 @@ import java.util.ArrayList;
  *
  */
 class ObjList {
-    ArrayList<String> list;
+    ArrayList<String> animList;
 }

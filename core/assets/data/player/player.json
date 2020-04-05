@@ -1,0 +1,16 @@
+{
+  "animations": [
+    {
+      "name": "idle",
+      "frameCount": 4
+    },
+    {
+      "name": "run",
+      "frameCount": 4
+    },
+    {
+      "name": "hit",
+      "frameCount": 1
+    }
+  ]
+}

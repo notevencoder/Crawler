@@ -2,6 +2,7 @@ package Screens;
 
 import Tools.DrawQueue;
 import Tools.RecourceManager;
+import Tools.ResourceManager.ResourceManager;
 import Tools.UpdateQueue;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
@@ -27,7 +28,7 @@ public class GameScreen implements Screen {
     private TmxMapLoader mapLoader;
     private OrthogonalTiledMapRenderer renderer;
     private TiledMap map;
-
+    private ResourceManager rm;
     private DrawQueue drawQueue;
     private UpdateQueue updateQueue;
 
@@ -45,7 +46,8 @@ public class GameScreen implements Screen {
         renderer = new OrthogonalTiledMapRenderer(map, 2);
         b2dr = new Box2DDebugRenderer();
         world = new World(new Vector2(0,0), true);
-
+        rm = new ResourceManager();
+        rm.load();
 
 
 
